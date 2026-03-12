@@ -1,0 +1,40 @@
+<?php
+    if($_SERVER['REQUEST_METHOD']=="POST"){
+        $sayi1=$_POST['sayi1'];
+        $sayi2=$_POST['sayi2'];
+        $islem=$_POST['islem'];
+        if($islem=="1"){
+            $sonuc=$sayi1+$sayi2;
+        }
+        elseif ($islem=="2") {
+            $sonuc= $sayi1-$sayi2;
+        }
+        elseif($islem=="3"){
+            $sonuc=$sayi1 * $sayi2;
+        }
+        elseif($islem="4"){
+            $sonuc= $sayi1/$sayi2;
+        }
+        else{
+            echo "içeriyi doldur";
+        }
+        echo "sonuc=".$sonuc;
+    }
+    
+    
+    
+    
+    
+    ?>
+<form method="post">
+1.sayı :<input type="number" name="sayi1"><br>
+2.sayı: <input type="number" name="sayi2"><br>
+<select name="islem">
+    <option value="">sec</option>
+    <option value="1">topla</option>
+    <option value="2">cıkart</option>
+    <option value="3">carp</option>
+    <option value="4">bol</option>
+</select><br>
+<button type=submit name="gönder">hesapla</button>
+</form>
