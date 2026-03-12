@@ -1,0 +1,14 @@
+<?php
+$urunler=[
+['adi'=>'telefon','miktar'=>2,'fiyat'=>5000],
+['adi'=>'tablet','miktar'=>5,'fiyat'=>7000]
+];
+$toplamfiyat=0;
+foreach($urunler as $urun){
+    $toplamfiyat+=$urun['miktar']*$urun['fiyat'];
+}
+echo "toplam fiyat=".$toplamfiyat;
+
+
+
+?>
